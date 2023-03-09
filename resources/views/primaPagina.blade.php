@@ -14,10 +14,18 @@
   </head>
   <body>
 
-    <h1>Ciao {{$pippo}} sono la tua nuova prima pagina</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <h1>Ciao {{$pippo}} sono la tua nuova prima pagina</h1>
+          
+          <a href="{{route('homePage')}}">Vai ad home</a>
+          <a href="{{route('productsPage')}}">Tutti i prodotti</a>
+        </div>
+      </div>
+    </div>
+
     
-    <a href="/">Vai ad home</a>
-    <a href="/prodotti">Tutti i prodotti</a>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

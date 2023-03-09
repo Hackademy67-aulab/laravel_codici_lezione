@@ -10,40 +10,34 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
-    <title>Pagina prodotti</title>
+    <title>Pagina dettaglio prodotto</title>
   </head>
   <body>
 
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-12 col-md-4">
-          <h1>Tutti i prodotti</h1>
-      
-          <a href="{{route('homePage')}}">Vai ad home</a>
-          <a href="{{route('firstPage')}}">Prima Pagina</a>
+          <h1 class="text-center">Dettaglio prodotto {{$product['name']}}</h1>
         </div>
       </div>
     </div>
     
-    
     <div class="container">
         <div class="row justify-content-center">
-            @foreach ($products as $product)
-                <div class="col-12 col-md-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{$product['img']}}" class="card-img-top" alt="{{$product['name']}}">
-                        <div class="card-body">
-                        <h5 class="card-title">{{$product['name']}}</h5>
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{$product['img']}}" class="card-img-top" alt="{{$product['name']}}">
+                    <div class="card-body">
+                    <h5 class="card-title">{{$product['name']}}</h5>
 
-                        <p>{{$product['price']}}</p>
+                    <p>{{$product['price']}}</p>
 
-                        <p>{{$product['description']}}</p>
+                    <p>{{$product['description']}}</p>
 
-                        <a href="{{route('productDetail', ['id'=>$product['id']])}}" class="btn btn-primary">Dettaglio</a>
-                        </div>
+                    <a href="{{route('productsPage')}}" class="btn btn-primary">Torna indietro</a>
                     </div>
-                  </div>
-            @endforeach
+                </div>
+                </div>
         </div>
     </div>
 
