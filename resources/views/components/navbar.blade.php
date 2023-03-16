@@ -15,6 +15,9 @@
           <li class="nav-item">
             <a class="nav-link {{(Route::currentRouteName() == 'workersPage') ? 'active' : '' }}" href="{{route('workersPage')}}">Chi siamo</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link {{(Route::currentRouteName() == 'contactUs') ? 'active' : '' }}" href="{{route('contactUs')}}">Contattaci</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown

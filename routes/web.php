@@ -36,11 +36,11 @@ Route::get('/first-page', [PublicController::class, 'firstPage'])->name('firstPa
 
 Route::get('/products-page', [ProductController::class, 'index'])->name('productsPage');
 
+Route::get('/contact-us', [PublicController::class, 'contactUs'])->name('contactUs');
+Route::post('/contact-submit', [PublicController::class, 'contactSubmit'])->name('contactSubmit');
 
 Route::get('/product-detail/{id}',[ProductController::class, 'show'])->name('productDetail');
 
-
 Route::get('/workers-page', [WorkerController::class, 'index'])->name('workersPage');
-
 
 Route::get('/worker-detail/{id}', [WorkerController::class, 'show'])->name('workerDetail');
